@@ -6,7 +6,7 @@ Run make_datasets script: This will generate and save the following pickle files
   
 2. Train the Model
 
-Execute model_training script: This script performs the following actions:
+Run model_training script: This script performs the following actions:
 - Trains the transformer model.
 - Saves the trained model.
 - Plots training and validation loss to confirm model training.
