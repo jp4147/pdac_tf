@@ -7,11 +7,11 @@ from tqdm import tqdm
 from scipy import interpolate
 from scipy.interpolate import interp1d
 
-with open('output/test_rs_tf_dx.pickle', 'rb') as handle:
+with open('output/rs_tf_dx.pickle', 'rb') as handle:
     b32 = pickle.load(handle)
-with open('output/test_rs_tf_dx1536.pickle', 'rb') as handle:
+with open('output/rs_tf1536_dx.pickle', 'rb') as handle:
     b1536 = pickle.load(handle)
-with open('output/test_rs_tf_gpt1536_dx.pickle', 'rb') as handle:
+with open('output/rs_tf_gpt1536_dx.pickle', 'rb') as handle:
     gpt1536 = pickle.load(handle)
 
 def sens_spec_range(res, spec_from = 0.80, spec_to = 1.0):
