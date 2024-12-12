@@ -49,7 +49,7 @@ def sens_spec_range(res, spec_from = 0.80, spec_to = 1.0):
 
 res_list = [b32, b1536, gpt1536]
 mod_name = ['$Baseline_{\t{fine\_tune32}}$ ', '$Baseline_{\t{fine\_tune1536}}$ ', '$GPT_{\t{fine\_tune1536}}$ ']
-color = ['k','gray','r']
+color = ['gray','black','r']
 
 m = '12m'
 for plot_type in ['no_interp', 'interp']:
