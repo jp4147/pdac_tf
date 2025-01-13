@@ -46,7 +46,7 @@ else:
 
     dat = {}
     case_rev = {}
-    int_m = int('3-6m'.split('-')[0])
+    int_m = int(months_prior.split('-')[0])
     if int_m  == 3:
         case_rev.update(dat6)
     else:
