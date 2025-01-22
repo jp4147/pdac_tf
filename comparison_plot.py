@@ -92,7 +92,7 @@ for m in months:
         roc_auc = auc(fpr[mod][m], tpr[mod][m])
         if mod == 'rm03_gpt_multi':
             roc_label='AUROC '+m+',' +'gpt_multi(0-3 excl.)'+': {:.3f}'.format(roc_auc)
-        elif mod=='base' or mod == 'gpt':
+        elif mod=='baseline' or mod == 'gpt':
             roc_label='AUROC '+m+',' +mod+'_binary,'+': {:.3f}'.format(roc_auc)
         else:
             roc_label='AUROC '+m+',' +mod+': {:.3f}'.format(roc_auc)
