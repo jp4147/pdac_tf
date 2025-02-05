@@ -105,7 +105,12 @@ for model_type in ['multi_class', 'binary']:
                 "sample_size": sample_size
             }
             rows.append(row_data)
+        hr['TP'] = [id for pred, true, id in zip(predictions, la, ids) if pred == 1 and true == 1]
+        hr['FP'] = [id for pred, true, id in zip(predictions, la, ids) if pred == 1 and true == 0]
+        name = data_path.split('/')
+        name = name[-1].split('.')
+        name = name[0]
+        with open('output/'+'_HR_'+name, 'wb') as handle:
+            pickle.dump(hr, handle)
 df = pd.DataFrame(rows)
 df.to_csv('output/clinical_utilty_eval.csv', index = None)
-        # hr['TP'] = [id for pred, true, id in zip(predictions, la, ids) if pred == 1 and true == 1]
-        # hr['FP'] = [id for pred, true, id in zip(predictions, la, ids) if pred == 1 and true == 0]
