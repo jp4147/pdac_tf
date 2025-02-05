@@ -34,7 +34,9 @@ print('control:', len(ctrl))
 for gap in gaps:
     print(gap, len(case[gap]))
 #############RF###################
+hr = {}
 for rf_path in rf_paths:
+    hr[rf_path] = {}
     print(rf_path.split('/')[1])
     rf = pd.read_csv(rf_path)
     rf.columns = ['person_id', 'date', 'concept_id']
@@ -68,3 +70,7 @@ for rf_path in rf_paths:
 
     print('TP: ', {gap:len(before[gap]) for gap in gaps})
     print('PPV: ', {gap:len(before[gap])/(len(before[gap])+len(ctrl_rf)) for gap in gaps})
+    hr[rf_path]['TP'] = before
+    hr[rf_path]['FP'] = ctrl_rf
+with open('output/rf_hr.pickle', 'wb') as h:
+    pickle.dump(hr, h)
