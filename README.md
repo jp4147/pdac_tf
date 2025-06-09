@@ -26,5 +26,6 @@ Run model_training.ipynb script: This script performs the following actions:
 2. Generate risk scores (generate_risk_scores.py, generate_risk_scores_binary_model.py)
 3. Model evaluation (comparison_plot.py)
 4. Bootstrap testing (bootstrap_test.py)
-5. LIME analyses (interpretation.py, imp_fea_plot.py)
-6. EHR model evaluation against traditional risk factors (rf_vs_EHR_testset.py, ppv_model.py, ppv_rf.py)
+5. Calibration (calibration.py)
+6. LIME analyses (interpretation.py, imp_fea_plot.py)
+7. EHR model evaluation against traditional risk factors (rf_vs_EHR_testset.py, ppv_model.py, ppv_rf.py)
